@@ -266,7 +266,7 @@
                 <div class="info-grid">
                     <div class="info-item">
                         <strong>User ID:</strong>
-                        <span id="current-user-id">ernesto.peto@yahoo.com</span>
+                        <span id="current-user-id">kabir.bedi@gmail.com</span>
                     </div>
                     <div class="info-item">
                         <strong>Current Organization:</strong>
@@ -310,7 +310,7 @@
                         <div><strong>Name:</strong> OrgA</div>
                         <div><strong>Address:</strong> via delle cantonate 23</div>
                         <div><strong>Account ID:</strong> 123</div>
-                        <div><strong>Ernesto's Role:</strong> admin</div>
+                        <div><strong>Kabir's Role:</strong> admin</div>
                     </div>
                     <div class="actions">
                         <button class="btn btn-switch" onclick="switchToOrganization('OrgA')">
@@ -331,7 +331,7 @@
                         <div><strong>Name:</strong> OrgB</div>
                         <div><strong>Address:</strong> via di calcagneto 57</div>
                         <div><strong>Account ID:</strong> 456</div>
-                        <div><strong>Ernesto's Role:</strong> viewer</div>
+                        <div><strong>Kabir's Role:</strong> viewer</div>
                     </div>
                     <div class="actions">
                         <button class="btn btn-switch" onclick="switchToOrganization('OrgB')">
@@ -357,8 +357,8 @@
             <div class="amplitude-info" style="background: #fff3cd; border-left: 5px solid #ffc107;">
                 <h3>🔍 Debugging: User Properties in Amplitude</h3>
                 <p><strong>Expected User Properties in Amplitude Dashboard:</strong></p>
-                <p>• <code>name</code>: "Ernesto"</p>
-                <p>• <code>email</code>: "ernesto.peto@yahoo.com"</p>
+                <p>• <code>name</code>: "Kabir"</p>
+                <p>• <code>email</code>: "kabir.bedi@gmail.com"</p>
                 <p>• <code>role</code>: "admin" or "viewer" (changes when you switch organizations)</p>
                 
                 <p><strong>Expected Group Properties (handled automatically):</strong></p>
@@ -368,8 +368,8 @@
                 <p><strong>Expected Raw JSON Structure:</strong></p>
                 <pre style="background: #f5f5f5; padding: 10px; border-radius: 5px; font-size: 12px; overflow-x: auto;">
 "user_properties": {
-  "name": "Ernesto",
-  "email": "ernesto.peto@yahoo.com", 
+  "name": "Kabir",
+  "email": "kabir.bedi@gmail.com", 
   "role": "admin"
 },
 "groups": {
@@ -382,7 +382,7 @@
                 <p>3. <strong>Perform Actions</strong>: Click "Create Template" → Event inherits role from user profile</p>
                 <p>4. <strong>Switch to OrgB</strong>: Click "Switch to OrgB" → User property <code>role</code> updates to "viewer"</p>
                 <p>5. <strong>Perform Actions</strong>: Click "View Template" → Event inherits new role from user profile</p>
-                <p>6. <strong>Check Amplitude</strong>: Go to Amplitude → Data → User Lookup → Search for "ernesto.peto@yahoo.com"</p>
+                <p>6. <strong>Check Amplitude</strong>: Go to Amplitude → Data → User Lookup → Search for "kabir.bedi@gmail.com"</p>
                 <p>7. <strong>Check User Properties Tab</strong>: Should show current <code>role</code> value</p>
                 <p>8. <strong>Check Raw Events</strong>: Events show role in "user_properties" section</p>
                 <p>9. <strong>Create User Composition Chart</strong>: Group by <code>organization</code> (group) → Break down by <code>role</code> (user property)</p>
@@ -447,9 +447,9 @@
 
         // Current user state
         let currentUser = {
-            id: 'ernesto.peto@yahoo.com',
-            name: 'Ernesto',
-            surname: 'Peto',
+            id: 'kabir.bedi@gmail.com',
+            name: 'Kabir',
+            surname: 'Bedi',
             currentOrganization: null,
             currentRole: null
         };
@@ -750,10 +750,10 @@
             }
         }
 
-        // Simulate the Ernesto scenario automatically
-        function simulateErnestoScenario() {
+        // Simulate the Kabir scenario automatically
+        function simulateKabirScenario() {
             setTimeout(() => {
-                logEvent('Demo Started', 'Simulating Ernesto\'s journey through organizations');
+                logEvent('Demo Started', 'Simulating Kabir\'s journey through organizations');
                 
                 setTimeout(() => switchToOrganization('OrgA'), 1000);
                 setTimeout(() => trackEvent('Template Created', 'OrgA'), 2000);
@@ -780,7 +780,7 @@
             }, 1000);
             
             // Uncomment the line below to auto-simulate the scenario
-            // simulateErnestoScenario();
+            // simulateKabirScenario();
         });
 
         // Page visibility tracking removed
